@@ -25,7 +25,7 @@ public class Club implements Serializable {
 	private String seu;
 	
 	@Column(name="num")
-	private int num;
+	private Integer num;
 	
 	@ManyToOne(cascade=CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name = "cod_gru") //FK
@@ -57,11 +57,11 @@ public class Club implements Serializable {
 		this.seu = seu;
 	}
 
-	public int getNum() {
+	public Integer getNum() {
 		return num;
 	}
 
-	public void setNum(int num) {
+	public void setNum(Integer num) {
 		this.num = num;
 	}
 

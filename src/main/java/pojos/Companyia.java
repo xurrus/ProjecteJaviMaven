@@ -17,7 +17,7 @@ public class Companyia implements Serializable {
 
 	@Id
 	@Column(name="cod")
-	private int cod;
+	private Integer cod;
 	@Column(name="nom")
 	private String nom;
 	@Column(name="dir")
@@ -33,11 +33,11 @@ public class Companyia implements Serializable {
 	
 	public Companyia() {}
 
-	public int getCod() {
+	public Integer getCod() {
 		return cod;
 	}
 
-	public void setCod(int cod) {
+	public void setCod(Integer cod) {
 		this.cod = cod;
 	}
 
