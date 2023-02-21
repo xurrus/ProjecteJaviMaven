@@ -8,7 +8,7 @@
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/musicaval</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">administrador</property><!-- password en clase / administrador en casa-->
+		<property name="connection.password">password</property><!-- password en clase / administrador en casa-->
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
