@@ -24,6 +24,15 @@ public class Esta implements Serializable {
 	private Disc disc;
 	
 	public Esta() {}
+	
+	
+
+	public Esta(Canso canso, Disc disc) {
+		this.canso = canso;
+		this.disc = disc;
+	}
+
+
 
 	public Canso getCanso() {
 		return canso;

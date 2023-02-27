@@ -38,6 +38,19 @@ public class Disc implements Serializable {
 	private List<Esta> llistaCansons = new ArrayList<Esta>();
 	
 	public Disc() {}
+	
+	
+
+	public Disc(Integer cod, String nom, String dia, Companyia companyia, Grup grup, List<Esta> llistaCansons) {
+		this.cod = cod;
+		this.nom = nom;
+		this.dia = dia;
+		this.companyia = companyia;
+		this.grup = grup;
+		this.llistaCansons = llistaCansons;
+	}
+
+
 
 	public Integer getCod() {
 		return cod;

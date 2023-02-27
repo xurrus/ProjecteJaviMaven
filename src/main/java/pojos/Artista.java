@@ -29,6 +29,22 @@ public class Artista implements Serializable {
 	
 	
 	public Artista() {}
+	
+	
+
+	public Artista(String dni, String nom, List<Pertany> llistaPertanys) {
+		this.dni = dni;
+		this.nom = nom;
+		this.llistaPertanys = llistaPertanys;
+	}
+
+
+
+	public Artista(String string, String string2) {
+		//TODO Auto-generated constructor stub
+	}
+
+
 
 	public String getDni() {
 		return dni;

@@ -32,6 +32,19 @@ public class Companyia implements Serializable {
 	private List<Disc> llistaDiscs = new ArrayList<Disc>();
 	
 	public Companyia() {}
+	
+	
+
+	public Companyia(Integer cod, String nom, String dir, String fax, String tfno, List<Disc> llistaDiscs) {
+		this.cod = cod;
+		this.nom = nom;
+		this.dir = dir;
+		this.fax = fax;
+		this.tfno = tfno;
+		this.llistaDiscs = llistaDiscs;
+	}
+
+
 
 	public Integer getCod() {
 		return cod;

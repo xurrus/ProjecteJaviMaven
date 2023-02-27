@@ -32,6 +32,18 @@ public class Club implements Serializable {
 	private Grup grup;
 	
 	public Club() {}
+	
+	
+
+	public Club(Integer cod, String nom, String seu, Integer num, Grup grup) {
+		this.cod = cod;
+		this.nom = nom;
+		this.seu = seu;
+		this.num = num;
+		this.grup = grup;
+	}
+
+
 
 	public Integer getCod() {
 		return cod;

@@ -30,6 +30,17 @@ public class Canso implements Serializable {
 	private List<Esta> llistaDiscs = new ArrayList<Esta>();
 	
 	public Canso() {}
+	
+	
+
+	public Canso(Integer cod, String titol, Double duracio, List<Esta> llistaDiscs) {
+		this.cod = cod;
+		this.titol = titol;
+		this.duracio = duracio;
+		this.llistaDiscs = llistaDiscs;
+	}
+
+
 
 	public Integer getCod() {
 		return cod;

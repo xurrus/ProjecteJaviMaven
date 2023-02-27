@@ -44,29 +44,18 @@ public class CarregaGrupsCompanyiesMongo {
 		/////////////////////////
 		List<Document> documentsGrups = new ArrayList<Document>();
 		for (Grup g : grupsBD) {
-			Document doc = new Document
-					("cod", g.getCod())
-					.append("nom", g.getNom())
-					.append("dia", g.getDia())
-					.append("pais", g.getPais());
+			Document doc = new Document("cod", g.getCod()).append("nom", g.getNom()).append("dia", g.getDia()).append("pais", g.getPais());
 			// afegim llista de objectes artista
 			List<Document> artistes = new ArrayList<Document>();
 			for (Pertany p : g.getLlistaPertanys()) {
-				Document docArtista = new Document
-						("dni", p.getArtista().getDni())
-						.append("nom", p.getArtista().getNom())
-						.append("funcio", p.getFuncio());
+				Document docArtista = new Document("dni", p.getArtista().getDni()).append("nom", p.getArtista().getNom()).append("funcio", p.getFuncio());
 				artistes.add(docArtista);
 			}
 			doc.append("artistes", artistes);
 			// afegim llista de objectes club
 			List<Document> clubs = new ArrayList<Document>();
 			for (Club comp : g.getLlistaClubs()) {
-				Document docClub = new Document
-						("cod", comp.getCod())
-						.append("nom", comp.getNom())
-						.append("seu", comp.getSeu())
-						.append("num", comp.getNum());
+				Document docClub = new Document("cod", comp.getCod()).append("nom", comp.getNom()).append("seu", comp.getSeu()).append("num", comp.getNum());
 				clubs.add(docClub);
 			}
 			doc.append("clubs", clubs);
@@ -78,26 +67,15 @@ public class CarregaGrupsCompanyiesMongo {
 		/////////////////////////
 		List<Document> documentsCompanyies = new ArrayList<Document>();
 		for (Companyia comp : companyiesBD) {
-			Document docCompanyia = new Document
-					("cod", comp.getCod())
-					.append("nom", comp.getNom())
-					.append("dir", comp.getDir())
-					.append("fax", comp.getFax())
-					.append("tfno", comp.getTfno());
+			Document docCompanyia = new Document("cod", comp.getCod()).append("nom", comp.getNom()).append("dir", comp.getDir()).append("fax", comp.getFax()).append("tfno", comp.getTfno());
 			// afegim llista de objectes discs
 			List<Document> documentsDiscs = new ArrayList<Document>();
 			for (Disc disc : comp.getLlistaDiscs()) {
-				Document docDisc = new Document
-						("cod", disc.getCod())
-						.append("nom", disc.getNom())
-						.append("dia", disc.getDia())
-						.append("cod_gru", disc.getGrup().getCod());
+				Document docDisc = new Document("cod", disc.getCod()).append("nom", disc.getNom()).append("dia", disc.getDia()).append("cod_gru", disc.getGrup().getCod());
+				//dins de cada disc, afegim llista de objectes cansons
 				List<Document> documentsCansons = new ArrayList<Document>();
 				for(Esta e : disc.getLlistaCansons()) {
-					Document docCanso = new Document
-							("cod",e.getCanso().getCod())
-							.append("titol", e.getCanso().getTitol())
-							.append("duracio", e.getCanso().getDuracio());
+					Document docCanso = new Document("cod",e.getCanso().getCod()).append("titol", e.getCanso().getTitol()).append("duracio", e.getCanso().getDuracio());
 					documentsCansons.add(docCanso);
 				}
 				docDisc.append("cansons", documentsCansons);

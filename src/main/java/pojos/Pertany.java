@@ -28,6 +28,16 @@ public class Pertany implements Serializable {
 	private String funcio;
 	
 	public Pertany() {}
+	
+	
+
+	public Pertany(Artista artista, Grup grup, String funcio) {
+		this.artista = artista;
+		this.grup = grup;
+		this.funcio = funcio;
+	}
+
+
 
 	public Artista getArtista() {
 		return artista;

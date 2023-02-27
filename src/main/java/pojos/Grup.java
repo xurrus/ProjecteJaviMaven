@@ -41,6 +41,17 @@ public class Grup implements Serializable {
 	private List<Disc> llistaDiscs = new ArrayList<Disc>();
 	
 	public Grup() {}
+	
+	
+
+	public Grup(Integer cod, String nom, String dia, String pais) {
+		this.cod = cod;
+		this.nom = nom;
+		this.dia = dia;
+		this.pais = pais;
+	}
+
+
 
 	public Integer getCod() {
 		return cod;
